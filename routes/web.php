@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Backend\Category\CategoryController;
 use App\Http\Controllers\Backend\Product\ProductController;
 use App\Http\Controllers\Backend\UserProfile\UserProfileUpdateController;
+use App\Http\Controllers\Frontend\HoomePageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,6 +55,7 @@ Route::middleware('auth')->prefix('product')->name('product.')->group(function (
 });
 
 
+Route::get('/', [HoomePageController::class,'index'])->name('index');
 
 
 

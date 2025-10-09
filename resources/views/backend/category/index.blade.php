@@ -1,4 +1,5 @@
 @extends('backend.layout')
+
 @section('backend_data')
     @push('backend_css')
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -33,7 +34,8 @@
                                 <select id="category" class="js-example-basic-single w-100" name="parent_id">
                                     <option selected disabled>Select Parent Category</option>
 
-                                    @foreach ($categories as $category)
+                                  
+                                    @foreach ($c_categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->category_title }}</option>
                                     @endforeach
                                 </select>
